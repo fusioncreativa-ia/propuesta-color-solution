@@ -287,12 +287,23 @@
   .gauge-card--before .gauge-stats li span:last-child{ color: var(--warn); }
   .gauge-card--after .gauge-stats li span:last-child{ color: var(--neon); }
 
-  .delta-banner{
-    margin-top: 1.75rem; text-align:center; padding: 1rem 1.5rem;
-    border-radius: var(--radius-md); background: rgb(204 255 0 / 0.06);
-    border:1px dashed rgb(204 255 0 / 0.3); font-size:.9rem; color:var(--ink);
+  .cost-card{
+    margin-top: 1.75rem; padding: 2rem; border-color: rgb(244 63 94 / 0.22);
   }
-  .delta-banner strong{ color:var(--neon); font-size:1.1rem; }
+  .eyebrow--warn{ color: var(--warn); }
+  .eyebrow--warn .eyebrow__dot{ background: var(--warn); box-shadow: 0 0 10px rgb(251 113 133 / 0.6); }
+  .cost-card__title{ font-size: clamp(1.25rem, 1.05rem + .8vw, 1.5rem); font-weight:800; margin: .75rem 0 1rem; }
+  .cost-card__body{ font-size: .95rem; line-height:1.65; margin-bottom: 1.25rem; }
+  .cost-card__body strong{ color: var(--ink); }
+  .cost-card__stat{ color: var(--warn); }
+  .cost-card__stat--after{ color: var(--neon); }
+  .cost-card__conclusion{
+    font-size: 1rem; line-height:1.6; padding: 1.1rem 1.25rem; border-radius: var(--radius-sm);
+    background: rgb(244 63 94 / 0.06); border:1px dashed rgb(244 63 94 / 0.3);
+    margin-bottom: .75rem;
+  }
+  .cost-card__conclusion strong{ color: var(--ink); }
+  .cost-card__source{ font-size: .72rem; color: var(--muted); }
 
   /* ---------- Pilares ---------- */
   .pillars-grid{ display:grid; grid-template-columns: 1fr; gap: 1.25rem; }
@@ -552,8 +563,16 @@
         </div>
       </div>
 
-      <div class="delta-banner reveal">
-        <strong>−6,9 s</strong> menos de espera en móvil antes de que un cliente vea el catálogo.
+      <div class="glass-card cost-card reveal" aria-labelledby="cost-title">
+        <div class="eyebrow eyebrow--warn"><span class="eyebrow__dot"></span>El costo de no actuar</div>
+        <h3 class="cost-card__title" id="cost-title">Cada segundo de espera es un cliente que se va</h3>
+        <p class="cost-card__body">
+          El sitio actual tarda <strong class="cost-card__stat">8,7 s</strong> en cargar en móvil frente a <strong class="cost-card__stat--after">1,8 s</strong> con la plataforma optimizada — <strong>−6,9 s</strong> menos de espera. Google reporta que más de la mitad de los visitantes móviles abandona una página que tarda más de 3 segundos en cargar<sup>†</sup>; el sitio actual está en casi el triple de ese umbral.
+        </p>
+        <p class="cost-card__conclusion">
+          Cada visitante que se va es una cotización que nunca entra. Con un ticket promedio de <strong>$5,000</strong> por equipo, <strong>una sola oportunidad perdida al año ya cuesta más que la plataforma completa.</strong>
+        </p>
+        <p class="cost-card__source">† Google / SOASTA Research, "The State of Online Retail Performance" (2016).</p>
       </div>
     </section>
 
