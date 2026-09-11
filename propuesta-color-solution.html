@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<!--
+  Contacto configurado:
+  - WhatsApp: +506 7242 3329 (wa.me/50672423329)
+  - Correo: info@fusioncreativa.us
+  - Vigencia de precios: 26 de septiembre de 2026 (15 días desde el envío)
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propuesta Comercial & Estrategia Digital — Color Solution</title>
+<meta name="description" content="Propuesta de transformación digital de Fusión Creativa para Color Solution: web inmersiva, dashboard comercial y reseñas en video." />
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  /* ---------- Tokens de marca (Fusión Creativa · neon glass) ---------- */
+  :root{
+    --bg:#050811;
+    --bg-2:#0f172a;
+    --neon:#ccff00;
+    --neon-soft:#a3e635;
+    --ink:#ffffff;
+    --body-text:#cbd5e1;
+    --muted:#94a3b8;
+    --warn:#fb7185;
+    --warn-soft:#f43f5e;
+    --line: rgb(163 230 53 / 0.15);
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
+    --radius-lg: 1.5rem;
+    --radius-md: 1rem;
+    --radius-sm: .75rem;
+    --measure: 68ch;
+  }
+
+  *{ box-sizing:border-box; }
+  html{
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+  }
+  body{
+    margin:0;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(at 0% 0%, rgb(204 255 0 / 0.07) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgb(15 23 42 / 0.9) 0px, transparent 50%);
+    color: var(--body-text);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    padding-bottom: var(--space-8);
+  }
+  img{ max-width:100%; display:block; }
+  a{ color: inherit; }
+  h1,h2,h3{ color: var(--ink); margin:0; line-height:1.15; }
+  p{ margin:0; }
+  ul{ margin:0; padding:0; list-style:none; }
+  button{ font-family:inherit; }
+
+  ::selection{ background: var(--neon); color:#050811; }
+
+  :focus-visible{
+    outline: 2px solid var(--neon);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; z-index:100;
+    background: var(--neon); color:#050811; font-weight:700;
+    padding: .75rem 1.25rem; border-radius: 0 0 .75rem 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  /* ---------- Layout primitives ---------- */
+  .wrap{ max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
+  .wrap--narrow{ max-width: 860px; }
+  .wrap--tight{ max-width: 760px; }
+
+  .section{ padding: var(--space-8) 0; }
+  .section:first-of-type{ padding-top: var(--space-6); }
+
+  .section__header{ text-align:center; max-width: 640px; margin: 0 auto var(--space-6); }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.5rem;
+    font-size: .75rem; font-weight:700; text-transform:uppercase;
+    letter-spacing: .28em; color: var(--neon);
+    margin-bottom: 1rem;
+  }
+  .eyebrow__dot{
+    width:.5rem; height:.5rem; border-radius:50%;
+    background: var(--neon); box-shadow: 0 0 10px rgb(204 255 0 / 0.7);
+  }
+  .section__title{
+    font-size: clamp(1.75rem, 1.35rem + 1.8vw, 2.5rem);
+    font-weight: 800; letter-spacing: -0.01em;
+  }
+  .section__subtitle{
+    color: var(--muted); font-size: .95rem; margin-top: .75rem;
+  }
+
+  /* ---------- Glass card system ---------- */
+  .glass-card{
+    background: linear-gradient(145deg, rgb(15 23 42 / 0.75), rgb(5 8 17 / 0.75));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 35px -10px rgb(0 0 0 / 0.5);
+  }
+  .glow{
+    box-shadow: 0 0 0 1px rgb(204 255 0 / 0.4), 0 0 30px 0 rgb(204 255 0 / 0.25);
+    border-color: rgb(204 255 0 / 0.4);
+  }
+  .text-glow{
+    text-shadow: 0 0 18px rgb(204 255 0 / 0.55), 0 0 48px rgb(163 230 53 / 0.25);
+  }
+  .pulse-glow{ position:relative; isolation:isolate; }
+  .pulse-glow::after{
+    content:''; position:absolute; inset:-6px; z-index:-1; border-radius:inherit;
+    box-shadow: 0 0 22px 4px rgb(204 255 0 / 0.55), 0 0 60px 0 rgb(204 255 0 / 0.35);
+    animation: pulseGlow 2.4s ease-in-out infinite;
+    pointer-events:none; will-change:opacity;
+  }
+  @keyframes pulseGlow{ 0%,100%{opacity:.5;} 50%{opacity:1;} }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    padding: .9rem 1.6rem; border-radius: 999px; font-weight:700; font-size:.95rem;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    min-height:44px;
+  }
+  .btn:hover{ transform: scale(1.05); }
+  .btn--primary{
+    background: var(--neon); color:#04120a;
+    box-shadow: 0 0 0 1px rgb(204 255 0 / 0.4), 0 0 30px 0 rgb(204 255 0 / 0.25);
+  }
+  .btn--ghost{
+    background: rgb(255 255 255 / 0.04); color: var(--ink);
+    border-color: rgb(255 255 255 / 0.14);
+  }
+  .btn--sm{ padding:.6rem 1.1rem; font-size:.8rem; min-height:40px; }
+  .btn--block{ width:100%; }
+  .btn svg{ width:1.1rem; height:1.1rem; flex-shrink:0; }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position: sticky; top:0; z-index:50;
+    background: rgb(5 8 17 / 0.72);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgb(255 255 255 / 0.06);
+  }
+  .topbar__inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 1rem; padding: .65rem 1.25rem;
+    max-width: 1120px; margin:0 auto;
+  }
+  .topbar__brand{ display:flex; align-items:center; gap:.65rem; min-width:0; }
+  .topbar__logo{ height:28px; width:auto; object-fit:contain; flex-shrink:0; }
+  .topbar__title{
+    font-size:.8rem; font-weight:600; color:var(--ink);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .topbar__title span{ color: var(--muted); font-weight:500; }
+
+  /* ---------- Hero ---------- */
+  .hero{ text-align:center; padding: var(--space-6) 0 var(--space-4); }
+  .hero__logo-wrap{ margin-bottom: var(--space-3); }
+  .hero__logo{
+    height:88px; width:auto; margin:0 auto; object-fit:contain;
+    filter: drop-shadow(0 0 24px rgb(204 255 0 / 0.22));
+  }
+  .badge{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.4rem .9rem; border-radius:999px;
+    background: rgb(15 23 42 / 0.9); border:1px solid rgb(204 255 0 / 0.3);
+    color: var(--neon); font-size:.72rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.12em;
+    margin-bottom: var(--space-3);
+  }
+  .badge__dot{
+    width:.55rem; height:.55rem; border-radius:50%; background: var(--neon);
+    animation: dotPulse 1.8s ease-in-out infinite;
+  }
+  @keyframes dotPulse{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+
+  .hero h1{
+    font-size: clamp(2.15rem, 1.5rem + 3.4vw, 3.75rem);
+    font-weight:800; letter-spacing:-0.02em; margin-bottom: var(--space-3);
+  }
+  .hero p.lead{
+    color: var(--muted); font-size: clamp(1rem, .9rem + .4vw, 1.25rem);
+    max-width: 640px; margin: 0 auto;
+  }
+  .hero p.lead strong{ color: var(--ink); font-weight:600; }
+  .hero p.lead .accent{ color: var(--neon); font-weight:600; }
+  .hero__meta{ margin-top: var(--space-3); font-size:.75rem; color: var(--muted); font-weight:500; }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  .reveal-grid > *:nth-child(1){ transition-delay: 0s; }
+  .reveal-grid > *:nth-child(2){ transition-delay: .08s; }
+  .reveal-grid > *:nth-child(3){ transition-delay: .16s; }
+  .reveal-grid > *:nth-child(4){ transition-delay: .24s; }
+  .reveal-grid > *:nth-child(5){ transition-delay: .32s; }
+  .reveal-grid > *:nth-child(6){ transition-delay: .4s; }
+  .reveal-grid > *:nth-child(7){ transition-delay: .48s; }
+  .reveal-grid > *:nth-child(8){ transition-delay: .56s; }
+
+  /* ---------- Bloque: Visión Ejecutiva ---------- */
+  .vision-card{ padding: 2rem; }
+  .vision-card h2{
+    font-size:1.5rem; font-weight:700; display:flex; align-items:center; gap:.75rem; margin-bottom:1rem;
+  }
+  .vision-card h2 svg{ width:1.5rem; height:1.5rem; color:var(--neon); flex-shrink:0; }
+  .vision-card p{ margin-bottom: 1.25rem; }
+  .vision-card p:last-child{ margin-bottom:0; color:var(--muted); }
+  .vision-card strong{ color: var(--ink); }
+
+  /* ---------- Diagnóstico PageSpeed ---------- */
+  .diagnostic-grid{
+    display:grid; grid-template-columns: 1fr; gap: 1.75rem;
+  }
+  @media (min-width: 800px){
+    .diagnostic-grid{ grid-template-columns: 1fr 1fr; align-items:stretch; }
+  }
+  .gauge-card{
+    padding: 2rem; display:flex; flex-direction:column; justify-content:space-between;
+    position:relative;
+  }
+  .gauge-card__tag{
+    display:inline-flex; font-size:.7rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.1em; padding:.3rem .75rem; border-radius:999px;
+  }
+  .gauge-card--before .gauge-card__tag{ color: var(--warn); background: rgb(244 63 94 / 0.1); border:1px solid rgb(244 63 94 / 0.3); }
+  .gauge-card--after .gauge-card__tag{ color: var(--neon); background: rgb(204 255 0 / 0.1); border:1px solid rgb(204 255 0 / 0.35); }
+  .gauge-card__head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem; gap:.75rem; flex-wrap:wrap; }
+  .gauge-card__caption{ font-size:.75rem; color:var(--muted); }
+  .gauge-card__ribbon{
+    position:absolute; top:0; right:0; background:var(--neon); color:#04120a;
+    font-size:.65rem; font-weight:800; text-transform:uppercase;
+    padding:.3rem 1rem; border-radius:0 var(--radius-lg) 0 var(--radius-sm);
+  }
+
+  .gauge-row{ display:flex; align-items:center; gap:1.5rem; margin-bottom:1.5rem; }
+  .gauge{ position:relative; width:96px; height:96px; flex-shrink:0; }
+  .gauge svg{ width:100%; height:100%; transform:rotate(-90deg); }
+  .gauge circle{ fill:none; stroke-width:10; }
+  .gauge .track{ stroke: rgb(255 255 255 / 0.08); }
+  .gauge .progress{ stroke-linecap:round; transition:none; }
+  .gauge-card--before .progress{ stroke: var(--warn-soft); }
+  .gauge-card--after .progress{ stroke: var(--neon); }
+  .gauge__value{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .gauge__num{ font-size:1.7rem; font-weight:800; line-height:1; }
+  .gauge-card--before .gauge__num{ color: var(--warn); }
+  .gauge-card--after .gauge__num{ color: var(--neon); }
+  .gauge__label{ font-size:.55rem; text-transform:uppercase; font-weight:700; color:var(--muted); margin-top:.15rem; }
+
+  .gauge-row__copy h3{ font-size:1.05rem; font-weight:700; margin-bottom:.35rem; }
+  .gauge-row__copy p{ font-size:.8rem; color:var(--muted); line-height:1.5; }
+
+  .gauge-stats{ border-top:1px solid rgb(255 255 255 / 0.08); padding-top:1.25rem; display:flex; flex-direction:column; gap:.7rem; }
+  .gauge-stats li{ display:flex; justify-content:space-between; align-items:center; font-size:.85rem; }
+  .gauge-stats li span:first-child{ color:var(--muted); font-size:.72rem; }
+  .gauge-stats li span:last-child{ font-weight:700; }
+  .gauge-card--before .gauge-stats li span:last-child{ color: var(--warn); }
+  .gauge-card--after .gauge-stats li span:last-child{ color: var(--neon); }
+
+  .delta-banner{
+    margin-top: 1.75rem; text-align:center; padding: 1rem 1.5rem;
+    border-radius: var(--radius-md); background: rgb(204 255 0 / 0.06);
+    border:1px dashed rgb(204 255 0 / 0.3); font-size:.9rem; color:var(--ink);
+  }
+  .delta-banner strong{ color:var(--neon); font-size:1.1rem; }
+
+  /* ---------- Pilares ---------- */
+  .pillars-grid{ display:grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width:640px){ .pillars-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (min-width:1024px){ .pillars-grid{ grid-template-columns: repeat(4,1fr); } }
+  .pillar{ padding: 1.5rem; }
+  .pillar__icon{
+    width:3rem; height:3rem; border-radius: var(--radius-sm);
+    background: rgb(204 255 0 / 0.1); border:1px solid rgb(204 255 0 / 0.3);
+    display:flex; align-items:center; justify-content:center; color:var(--neon);
+    margin-bottom:1rem;
+  }
+  .pillar__icon svg{ width:1.5rem; height:1.5rem; }
+  .pillar h3{ font-size:1.05rem; font-weight:700; margin-bottom:.5rem; }
+  .pillar p{ font-size:.85rem; color:var(--muted); line-height:1.55; }
+
+  /* ---------- Planes ---------- */
+  .plans-note{ text-align:center; color:var(--muted); margin-top:.5rem; font-size:.95rem; }
+  .plans-note strong{ color:var(--ink); }
+  .plans-grid{ display:grid; grid-template-columns:1fr; gap:1.75rem; margin-top: var(--space-6); align-items:stretch; }
+  @media (min-width:1024px){ .plans-grid{ grid-template-columns: repeat(3,1fr); } }
+
+  .plan-card{ padding: 2rem; display:flex; flex-direction:column; position:relative; }
+  .plan-card--featured{ padding-top: 2.5rem; }
+  .plan__ribbon{
+    position:absolute; top:-.9rem; left:50%; transform:translateX(-50%);
+    background:var(--neon); color:#04120a; font-size:.7rem; font-weight:800;
+    text-transform:uppercase; letter-spacing:.04em; padding:.4rem 1.1rem;
+    border-radius:999px; box-shadow:0 8px 20px -4px rgb(204 255 0 / 0.5);
+    white-space:nowrap;
+  }
+  .plan__kicker{ font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.4rem; }
+  .plan-card--featured .plan__kicker{ color:var(--neon); }
+  .plan__name{ font-size:1.4rem; font-weight:800; }
+  .plan__tagline{ font-size:.78rem; color:var(--muted); margin-top:.3rem; }
+  .plan__price-row{ margin: 1.25rem 0; }
+  .plan__price{ display:flex; align-items:baseline; gap:.3rem; }
+  .plan__price-num{ font-size:2.4rem; font-weight:800; color:var(--ink); }
+  .plan-card--featured .plan__price-num{ font-size:2.75rem; }
+  .plan__price-unit{ font-size:.85rem; color:var(--muted); }
+  .plan__anchor{ font-size:.75rem; color:var(--neon); font-weight:600; margin-top:.35rem; }
+  .plan__setup{ font-size:.72rem; color:var(--muted); margin-top:.15rem; }
+
+  .plan__features{ border-top:1px solid rgb(255 255 255 / 0.08); padding-top:1.25rem; display:flex; flex-direction:column; gap:.7rem; flex:1; }
+  .plan__feature{ display:flex; align-items:flex-start; gap:.55rem; font-size:.88rem; }
+  .plan__feature svg{ width:1rem; height:1rem; flex-shrink:0; margin-top:.15rem; }
+  .plan__feature--on svg{ color: var(--neon); }
+  .plan__feature--on.plan__feature--emphasis{ color:var(--ink); font-weight:600; }
+  .plan__feature--off{ color: var(--muted); text-decoration: line-through; }
+  .plan__feature--off svg{ color: var(--muted); }
+
+  .plan__footer{ margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid rgb(255 255 255 / 0.08); }
+
+  /* ---------- Matriz comparativa ---------- */
+  .matrix-card{ padding: 1.5rem; }
+  @media (min-width:640px){ .matrix-card{ padding: 2rem; } }
+  .matrix-card h3{ font-size:1.15rem; font-weight:700; text-align:center; margin-bottom:1.5rem; }
+  .matrix-scroll{ overflow-x:auto; }
+  table.matrix{ width:100%; border-collapse:collapse; font-size:.88rem; }
+  table.matrix caption{ position:absolute; width:1px; height:1px; overflow:hidden; }
+  table.matrix thead th{
+    background: rgb(2 6 23 / 0.7); text-transform:uppercase; font-size:.7rem;
+    color:var(--muted); text-align:center; padding: 1rem .75rem;
+    border-bottom:1px solid rgb(255 255 255 / 0.08);
+  }
+  table.matrix thead th:first-child{ text-align:left; }
+  table.matrix thead th.is-featured{ color:var(--neon); font-weight:800; }
+  table.matrix tbody tr{ border-bottom:1px solid rgb(255 255 255 / 0.06); }
+  table.matrix tbody td{ padding: 1rem .75rem; text-align:center; }
+  table.matrix tbody td:first-child{ text-align:left; font-weight:600; color:var(--ink); }
+  .cell{ display:inline-flex; align-items:center; justify-content:center; gap:.35rem; }
+  .cell--yes{ color:var(--neon); font-weight:700; }
+  .cell--yes svg{ width:1.05rem; height:1.05rem; }
+  .cell--no{ color:var(--muted); }
+  .cell--no svg{ width:1.05rem; height:1.05rem; }
+  .cell--text{ color:var(--body-text); font-size:.82rem; }
+
+  @media (max-width: 720px){
+    table.matrix thead{ display:none; }
+    table.matrix, table.matrix tbody, table.matrix tr, table.matrix td{ display:block; width:100%; }
+    table.matrix tr{
+      margin-bottom:1rem; border:1px solid rgb(255 255 255 / 0.08); border-radius: var(--radius-md);
+      background: rgb(2 6 23 / 0.5); overflow:hidden;
+    }
+    table.matrix tr:last-child{ margin-bottom:0; }
+    table.matrix td{ border-bottom:1px solid rgb(255 255 255 / 0.06); padding:.75rem 1rem; }
+    table.matrix td:last-child{ border-bottom:none; }
+    table.matrix td:first-child{ background: rgb(255 255 255 / 0.03); font-size:.85rem; }
+    table.matrix td:not(:first-child){ display:flex; align-items:center; justify-content:space-between; text-align:right; }
+    table.matrix td:not(:first-child)::before{
+      content: attr(data-label); font-size:.72rem; font-weight:600; color:var(--muted);
+      text-transform:uppercase; letter-spacing:.05em;
+    }
+  }
+
+  /* ---------- Cierre / CTA ---------- */
+  .closing-card{ padding: 2.5rem 2rem; text-align:center; }
+  .closing-card h2{ font-size:1.6rem; font-weight:800; margin-bottom:.6rem; }
+  .closing-card > p{ color:var(--muted); font-size:.9rem; max-width:32rem; margin:0 auto var(--space-4); }
+
+  .timeline{ display:grid; grid-template-columns:1fr; gap:1rem; text-align:left; margin-bottom: var(--space-4); }
+  @media (min-width:640px){ .timeline{ grid-template-columns: repeat(2,1fr); } }
+  @media (min-width:960px){ .timeline{ grid-template-columns: repeat(4,1fr); } }
+  .timeline__step{
+    background: rgb(2 6 23 / 0.7); border:1px solid rgb(255 255 255 / 0.08);
+    border-radius: var(--radius-sm); padding:1rem;
+  }
+  .timeline__num{ color:var(--neon); font-weight:800; font-size:.85rem; margin-bottom:.35rem; }
+  .timeline__label{ font-size:.8rem; color:var(--body-text); font-weight:500; }
+
+  .cta-actions{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:.5rem; }
+
+  .validity-note{ margin-top:1.5rem; font-size:.78rem; color:var(--muted); }
+
+  /* ---------- Footer ---------- */
+  .site-footer{ text-align:center; padding: var(--space-6) 1.25rem var(--space-4); color:var(--muted); font-size:.78rem; }
+  .site-footer strong{ color:var(--body-text); }
+  .site-footer p + p{ margin-top:.35rem; }
+
+  /* ---------- Floating WhatsApp CTA ---------- */
+  .floating-cta{
+    position:fixed; bottom:1.25rem; right:1.25rem; z-index:60;
+    width:60px; height:60px; border-radius:50%;
+    background: var(--neon); color:#04120a;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 10px 30px -6px rgb(0 0 0 / .6);
+    text-decoration:none; opacity:0; transform: translateY(16px) scale(.9);
+    pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .floating-cta.is-visible{ opacity:1; transform:none; pointer-events:auto; }
+  .floating-cta svg{ width:28px; height:28px; }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *, *::before, *::after{
+      animation-duration:.001ms !important; animation-iteration-count:1 !important;
+      transition-duration:.001ms !important; scroll-behavior:auto !important;
+    }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__brand">
+        <picture>
+          <source srcset="logo-480.webp" type="image/webp" />
+          <img src="logo-480.png" alt="Fusión Creativa" class="topbar__logo" width="480" height="320" loading="eager" />
+        </picture>
+        <span class="topbar__title">Color Solution <span>· Propuesta Digital</span></span>
+      </div>
+      <a class="btn btn--primary btn--sm" href="https://wa.me/50672423329?text=Hola%2C%20quiero%20avanzar%20con%20la%20propuesta%20digital%20de%20Color%20Solution." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.4 5.08L2 22l5.2-1.48a9.9 9.9 0 0 0 4.84 1.27h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2m0 18.13c-1.5 0-2.98-.4-4.25-1.16l-.3-.18-3.09.88.9-3-.2-.31a8.2 8.2 0 0 1-1.27-4.45c0-4.52 3.68-8.2 8.21-8.2 2.2 0 4.26.85 5.81 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.53-3.68 8.22-8.21 8.22m4.5-6.14c-.25-.12-1.47-.72-1.69-.8-.23-.09-.4-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-1.46-.73-2.42-1.3-3.38-2.95-.26-.44.26-.41.74-1.36.08-.17.04-.31-.03-.43-.08-.12-.6-1.45-.82-1.93-.22-.48-.44-.42-.6-.42-.16-.01-.34-.01-.53-.01-.19 0-.48.07-.73.34-.25.27-.97.95-.97 2.32 0 1.37 1 2.7 1.14 2.88.14.19 1.95 2.98 4.73 4.06 2.34.91 2.34.6 2.75.56.42-.03 1.35-.55 1.54-1.08.19-.53.19-.98.13-1.08-.06-.09-.23-.15-.48-.27" /></svg>
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero__logo-wrap">
+        <picture>
+          <source srcset="logo-480.webp" type="image/webp" />
+          <img src="logo-480.png" alt="Fusión Creativa" class="hero__logo" width="480" height="320" fetchpriority="high" />
+        </picture>
+      </div>
+      <div class="badge">
+        <span class="badge__dot"></span>
+        Propuesta Comercial de Transformación Digital
+      </div>
+      <h1>Estrategia Digital &amp; Web Inmersiva</h1>
+      <p class="lead">
+        Exclusivo para <strong>Color Solution</strong> — Desarrollado por <span class="accent">Fusión Creativa</span>
+      </p>
+      <div class="hero__meta">Septiembre 2026 · Documento confidencial</div>
+    </section>
+
+    <!-- BLOQUE 1: Visión Ejecutiva -->
+    <section class="section wrap wrap--narrow" aria-labelledby="vision-title">
+      <div class="glass-card vision-card reveal">
+        <h2 id="vision-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          Visión Ejecutiva
+        </h2>
+        <p>
+          En el sector de venta de equipo, cortadoras, plotters e impresoras de mediano y alto volumen, la decisión de compra de un cliente industrial o comercial depende de dos factores críticos: <strong>el respaldo técnico demostrado</strong> (ver equipos operando en talleres reales) y <strong>la agilidad en soporte y repuestos</strong> (cotizar insumos y mantenimiento antes de detener producción).
+        </p>
+        <p>
+          Esta propuesta busca transformar el activo digital de <strong>Color Solution</strong> en una plataforma comercial activa las 24 horas del día. Combinamos una experiencia web inmersiva de alta velocidad, un Dashboard de Control Comercial para la gerencia y un Módulo de Reputación en Video que captura testimonios de clientes con sus equipos operando a plena capacidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOQUE: Diagnóstico de Rendimiento -->
+    <section class="section wrap" aria-labelledby="diag-title">
+      <div class="section__header">
+        <div class="eyebrow"><span class="eyebrow__dot"></span>Google PageSpeed</div>
+        <h2 class="section__title" id="diag-title">Diagnóstico de Rendimiento</h2>
+        <p class="section__subtitle">Comparativa de velocidad en dispositivos móviles — el factor crítico que hoy limita la conversión</p>
+      </div>
+
+      <div class="diagnostic-grid">
+        <div class="glass-card gauge-card gauge-card--before reveal" data-gauge="42">
+          <div>
+            <div class="gauge-card__head">
+              <span class="gauge-card__tag">Estado actual</span>
+              <span class="gauge-card__caption">Móvil (Lighthouse)</span>
+            </div>
+            <div class="gauge-row">
+              <div class="gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="track" cx="60" cy="60" r="52"></circle>
+                  <circle class="progress" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"></circle>
+                </svg>
+                <span class="gauge__value"><span class="gauge__num" data-num>0</span><span class="gauge__label">Rendimiento</span></span>
+              </div>
+              <div class="gauge-row__copy">
+                <h3>Carga lenta y fricción</h3>
+                <p>Los clientes móviles abandonan la web antes de ver los catálogos debido a tiempos de espera excesivos.</p>
+              </div>
+            </div>
+          </div>
+          <ul class="gauge-stats">
+            <li><span>Renderizado mayor (LCP)</span><span>8,7 s</span></li>
+            <li><span>Primer contenido (FCP)</span><span>4,1 s</span></li>
+            <li><span>Bloqueo total (TBT)</span><span>680 ms</span></li>
+          </ul>
+        </div>
+
+        <div class="glass-card glow gauge-card gauge-card--after reveal" data-gauge="96">
+          <span class="gauge-card__ribbon">Optimizado ⭐</span>
+          <div>
+            <div class="gauge-card__head">
+              <span class="gauge-card__tag">Con Fusión Creativa</span>
+              <span class="gauge-card__caption">Móvil (Optimizado)</span>
+            </div>
+            <div class="gauge-row">
+              <div class="gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="track" cx="60" cy="60" r="52"></circle>
+                  <circle class="progress" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"></circle>
+                </svg>
+                <span class="gauge__value"><span class="gauge__num" data-num>0</span><span class="gauge__label">Rendimiento</span></span>
+              </div>
+              <div class="gauge-row__copy">
+                <h3>Carga instantánea</h3>
+                <p>Experiencia de navegación fluida, diseño inmersivo y apertura inmediata de cotizaciones en celulares.</p>
+              </div>
+            </div>
+          </div>
+          <ul class="gauge-stats">
+            <li><span>Renderizado mayor (LCP)</span><span>1,8 s</span></li>
+            <li><span>Primer contenido (FCP)</span><span>1,7 s</span></li>
+            <li><span>Bloqueo total (TBT)</span><span>0 ms</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="delta-banner reveal">
+        <strong>−6,9 s</strong> menos de espera en móvil antes de que un cliente vea el catálogo.
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: Pilares -->
+    <section class="section wrap" aria-labelledby="pillars-title">
+      <div class="section__header">
+        <h2 class="section__title" id="pillars-title">Pilares de la Plataforma</h2>
+        <p class="section__subtitle">Tecnología diseñada para maximizar la venta de equipos, soporte técnico y suministros</p>
+      </div>
+      <div class="pillars-grid reveal-grid">
+        <div class="glass-card pillar reveal">
+          <div class="pillar__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+          <h3>Web Inmersiva</h3>
+          <p>Rediseño moderno enfocado en catálogo de equipos de impresión, plotters, cortadoras y pedido rápido de suministros.</p>
+        </div>
+        <div class="glass-card pillar reveal">
+          <div class="pillar__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg></div>
+          <h3>Admin Simplificado</h3>
+          <p>Panel intuitivo para actualizar fichas técnicas, precios de consumibles y promociones en minutos.</p>
+        </div>
+        <div class="glass-card pillar reveal">
+          <div class="pillar__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div>
+          <h3>Dashboard Ejecutivo</h3>
+          <p>Visualización clara de cotizaciones de equipo, repuestos solicitados y cálculo de volumen comercial en dólares.</p>
+        </div>
+        <div class="glass-card pillar reveal">
+          <div class="pillar__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></div>
+          <h3>Reseñas en Video</h3>
+          <p>Enlace/QR para que clientes muestren sus plotters o cortadoras instaladas y graben un testimonio de 15 segundos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: Planes -->
+    <section class="section wrap" aria-labelledby="plans-title">
+      <div class="section__header">
+        <h2 class="section__title" id="plans-title">Planes y Modelos de Inversión</h2>
+        <p class="plans-note">Cuota de Setup fija de <strong>$1,550 USD</strong> para cualquiera de los planes</p>
+      </div>
+      <div class="plans-grid reveal-grid" id="plans-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- BLOQUE 4: Matriz Comparativa -->
+    <section class="section wrap wrap--narrow" aria-labelledby="matrix-title">
+      <div class="glass-card matrix-card reveal">
+        <h3 id="matrix-title">Matriz Comparativa de Funcionalidades</h3>
+        <div class="matrix-scroll">
+          <table class="matrix" id="matrix-table">
+            <caption>Comparación de funcionalidades incluidas en cada plan: Essential, Growth y Enterprise.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Funcionalidad</th>
+                <th scope="col">Essential ($180)</th>
+                <th scope="col" class="is-featured">Growth ($220) ⭐</th>
+                <th scope="col">Enterprise ($340)</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 5: Cierre / Próximos pasos -->
+    <section class="section wrap wrap--tight" aria-labelledby="closing-title">
+      <div class="glass-card glow closing-card reveal">
+        <h2 id="closing-title">Próximos Pasos de Implementación</h2>
+        <p>Una vez seleccionado el paquete de su preferencia, iniciamos la construcción de la plataforma de inmediato.</p>
+
+        <div class="timeline">
+          <div class="timeline__step">
+            <div class="timeline__num">Paso 1</div>
+            <div class="timeline__label">Selección del Plan Comercial</div>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__num">Paso 2</div>
+            <div class="timeline__label">Anticipo 50% de Cuota Setup</div>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__num">Paso 3</div>
+            <div class="timeline__label">Recopilación de textos, imágenes, videos y archivos .pdf</div>
+          </div>
+          <div class="timeline__step">
+            <div class="timeline__num">Paso 4</div>
+            <div class="timeline__label">Despliegue (7-10 días hábiles)</div>
+          </div>
+        </div>
+
+        <div class="cta-actions">
+          <a class="btn btn--primary pulse-glow" href="https://wa.me/50672423329?text=Hola%2C%20quiero%20avanzar%20con%20la%20propuesta%20digital%20de%20Color%20Solution." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.4 5.08L2 22l5.2-1.48a9.9 9.9 0 0 0 4.84 1.27h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2m0 18.13c-1.5 0-2.98-.4-4.25-1.16l-.3-.18-3.09.88.9-3-.2-.31a8.2 8.2 0 0 1-1.27-4.45c0-4.52 3.68-8.2 8.21-8.2 2.2 0 4.26.85 5.81 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.53-3.68 8.22-8.21 8.22m4.5-6.14c-.25-.12-1.47-.72-1.69-.8-.23-.09-.4-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-1.46-.73-2.42-1.3-3.38-2.95-.26-.44.26-.41.74-1.36.08-.17.04-.31-.03-.43-.08-.12-.6-1.45-.82-1.93-.22-.48-.44-.42-.6-.42-.16-.01-.34-.01-.53-.01-.19 0-.48.07-.73.34-.25.27-.97.95-.97 2.32 0 1.37 1 2.7 1.14 2.88.14.19 1.95 2.98 4.73 4.06 2.34.91 2.34.6 2.75.56.42-.03 1.35-.55 1.54-1.08.19-.53.19-.98.13-1.08-.06-.09-.23-.15-.48-.27" /></svg>
+            Hablar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="mailto:info@fusioncreativa.us?subject=Propuesta%20Color%20Solution">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Escribir por correo
+          </a>
+        </div>
+
+        <p class="validity-note">Precios vigentes hasta el 26 de septiembre de 2026.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Fusión Creativa</strong> — Documento confidencial preparado exclusivamente para Color Solution.</p>
+    <p>© 2026 Fusión Creativa. Todos los derechos reservados.</p>
+  </footer>
+
+  <a class="floating-cta" id="floating-cta" href="https://wa.me/50672423329?text=Hola%2C%20quiero%20avanzar%20con%20la%20propuesta%20digital%20de%20Color%20Solution." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.4 5.08L2 22l5.2-1.48a9.9 9.9 0 0 0 4.84 1.27h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2m0 18.13c-1.5 0-2.98-.4-4.25-1.16l-.3-.18-3.09.88.9-3-.2-.31a8.2 8.2 0 0 1-1.27-4.45c0-4.52 3.68-8.2 8.21-8.2 2.2 0 4.26.85 5.81 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.53-3.68 8.22-8.21 8.22m4.5-6.14c-.25-.12-1.47-.72-1.69-.8-.23-.09-.4-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-1.46-.73-2.42-1.3-3.38-2.95-.26-.44.26-.41.74-1.36.08-.17.04-.31-.03-.43-.08-.12-.6-1.45-.82-1.93-.22-.48-.44-.42-.6-.42-.16-.01-.34-.01-.53-.01-.19 0-.48.07-.73.34-.25.27-.97.95-.97 2.32 0 1.37 1 2.7 1.14 2.88.14.19 1.95 2.98 4.73 4.06 2.34.91 2.34.6 2.75.56.42-.03 1.35-.55 1.54-1.08.19-.53.19-.98.13-1.08-.06-.09-.23-.15-.48-.27" /></svg>
+  </a>
+
+<script>
+(function(){
+  "use strict";
+  var WA_NUMBER = "50672423329";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var CHECK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+  var DASH_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"></path></svg>';
+
+  /* ---------- Datos de planes (fuente única) ---------- */
+  var PLANS = [
+    {
+      id: "essential",
+      kicker: "Plan 1",
+      name: "Smart Essential",
+      tagline: "Presencia digital moderna y métricas operativas",
+      price: 180,
+      featured: false,
+      features: [
+        { text: "Sitio Web Inmersivo Rediseñado", on: true },
+        { text: "Panel de Edición Rápida (Admin)", on: true },
+        { text: "Dashboard Básico de Solicitudes y Clics", on: true },
+        { text: "Hosting de Alta Velocidad y SSL", on: true },
+        { text: "Bot Conversacional 24/7 con IA", on: false },
+        { text: "Módulo de Reseñas en Video", on: false }
+      ]
+    },
+    {
+      id: "growth",
+      kicker: "Plan 2 · Recomendado ⭐",
+      name: "Growth AI",
+      tagline: "Acelerador de ventas de equipos y prueba social",
+      price: 220,
+      featured: true,
+      features: [
+        { text: "Todo lo del Plan Smart Essential", on: true },
+        { text: "Bot Conversacional 24/7 con IA", on: true, emphasis: true },
+        { text: "Módulo de Reseñas en Video (QR/Link)", on: true, emphasis: true },
+        { text: "Calculadora de ROI & Oportunidades ($)", on: true },
+        { text: "Pre-calificación de Leads", on: true }
+      ]
+    },
+    {
+      id: "enterprise",
+      kicker: "Plan 3",
+      name: "Enterprise AI 🚀",
+      tagline: "Automatización comercial y servicio prioritario",
+      price: 340,
+      featured: false,
+      features: [
+        { text: "Todo lo del Plan Growth AI", on: true },
+        { text: "Alertas Instantáneas Push / WA", on: true, emphasis: true },
+        { text: "Gestión IA de Reseñas Google Maps", on: true, emphasis: true },
+        { text: "Seguimiento Automático de Cotizaciones", on: true },
+        { text: "Radar de Retención e Interés de Equipo", on: true }
+      ]
+    }
+  ];
+
+  function waLink(planName){
+    var msg = "Hola, quiero más información sobre el Plan " + planName + " para Color Solution.";
+    return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+  }
+
+  function renderPlans(){
+    var grid = document.getElementById("plans-grid");
+    if(!grid) return;
+    var html = PLANS.map(function(plan){
+      var perDay = (plan.price / 30).toFixed(2);
+      var featuresHtml = plan.features.map(function(f){
+        var cls = "plan__feature " + (f.on ? "plan__feature--on" : "plan__feature--off") + (f.emphasis ? " plan__feature--emphasis" : "");
+        var icon = f.on ? CHECK_ICON : DASH_ICON;
+        return '<li class="' + cls + '">' + icon + '<span>' + f.text + '</span></li>';
+      }).join("");
+
+      return (
+        '<div class="glass-card plan-card ' + (plan.featured ? 'glow plan-card--featured' : '') + ' reveal">' +
+          (plan.featured ? '<span class="plan__ribbon">Plan Estrella Recomendado ⭐</span>' : '') +
+          '<div class="plan__kicker">' + plan.kicker + '</div>' +
+          '<h3 class="plan__name">' + plan.name + '</h3>' +
+          '<p class="plan__tagline">' + plan.tagline + '</p>' +
+          '<div class="plan__price-row">' +
+            '<div class="plan__price"><span class="plan__price-num">$' + plan.price + '</span><span class="plan__price-unit">/ mes</span></div>' +
+            '<div class="plan__anchor">≈ $' + perDay + ' por día</div>' +
+            '<div class="plan__setup">+ Setup inicial de $1,550</div>' +
+          '</div>' +
+          '<ul class="plan__features">' + featuresHtml + '</ul>' +
+          '<div class="plan__footer">' +
+            '<a class="btn ' + (plan.featured ? 'btn--primary' : 'btn--ghost') + ' btn--block" href="' + waLink(plan.name) + '" target="_blank" rel="noopener">Elegir ' + plan.name + '</a>' +
+          '</div>' +
+        '</div>'
+      );
+    }).join("");
+    grid.innerHTML = html;
+  }
+
+  /* ---------- Datos de la matriz comparativa (fuente única) ---------- */
+  var FEATURES = [
+    { name: "Sitio Web Inmersivo Rediseñado", essential: true, growth: true, enterprise: true },
+    { name: "Panel de Edición Rápida (Admin)", essential: true, growth: true, enterprise: true },
+    { name: "Dashboard de Métricas Comerciales", essential: "Básico", growth: "Avanzado + ROI", enterprise: "Completo + Fuga" },
+    { name: "Bot Conversacional con IA 24/7", essential: false, growth: true, enterprise: "✓ Multicanal" },
+    { name: "Módulo de Reseñas en Video (QR/Link)", essential: false, growth: true, enterprise: true },
+    { name: "Alertas Instantáneas (Push / WhatsApp)", essential: false, growth: false, enterprise: true },
+    { name: "Gestión IA de Reseñas Google Maps", essential: false, growth: false, enterprise: true },
+    { name: "Seguimiento Automático de Cotizaciones", essential: false, growth: false, enterprise: true }
+  ];
+  var COL_LABELS = { essential: "Essential ($180)", growth: "Growth ($220)", enterprise: "Enterprise ($340)" };
+
+  function cellHtml(value){
+    if (value === true) {
+      return '<span class="cell cell--yes">' + CHECK_ICON + '<span class="sr-only">Incluido</span></span>';
+    }
+    if (value === false) {
+      return '<span class="cell cell--no">' + DASH_ICON + '<span class="sr-only">No incluido</span></span>';
+    }
+    if (typeof value === "string" && value.indexOf("✓") === 0) {
+      return '<span class="cell cell--yes">' + CHECK_ICON + '<span>' + value.replace("✓", "").trim() + '</span></span>';
+    }
+    return '<span class="cell cell--text">' + value + '</span>';
+  }
+
+  function renderMatrix(){
+    var tbody = document.querySelector("#matrix-table tbody");
+    if(!tbody) return;
+    var rows = FEATURES.map(function(row){
+      return (
+        '<tr>' +
+          '<td>' + row.name + '</td>' +
+          '<td data-label="' + COL_LABELS.essential + '">' + cellHtml(row.essential) + '</td>' +
+          '<td data-label="' + COL_LABELS.growth + '">' + cellHtml(row.growth) + '</td>' +
+          '<td data-label="' + COL_LABELS.enterprise + '">' + cellHtml(row.enterprise) + '</td>' +
+        '</tr>'
+      );
+    }).join("");
+    tbody.innerHTML = rows;
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  function initReveal(){
+    var targets = document.querySelectorAll(".reveal");
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      targets.forEach(function(el){ el.classList.add("is-visible"); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+    targets.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- Gauge animation ---------- */
+  var CIRCUMFERENCE = 2 * Math.PI * 52; // r=52
+
+  function animateGauge(card){
+    var target = parseInt(card.getAttribute("data-gauge"), 10) || 0;
+    var numEl = card.querySelector("[data-num]");
+    var ringEl = card.querySelector(".progress");
+    if (reduceMotion) {
+      numEl.textContent = target;
+      ringEl.style.strokeDashoffset = CIRCUMFERENCE - (target / 100) * CIRCUMFERENCE;
+      return;
+    }
+    var start = null;
+    var duration = 1200;
+    function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+    function step(ts){
+      if (start === null) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = easeOutCubic(progress);
+      var current = Math.round(eased * target);
+      numEl.textContent = current;
+      ringEl.style.strokeDashoffset = CIRCUMFERENCE - eased * (target / 100) * CIRCUMFERENCE;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function initGauges(){
+    var cards = document.querySelectorAll("[data-gauge]");
+    if (!("IntersectionObserver" in window)) {
+      cards.forEach(animateGauge);
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          animateGauge(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    cards.forEach(function(card){ io.observe(card); });
+  }
+
+  /* ---------- Floating CTA visibility ---------- */
+  function initFloatingCta(){
+    var fab = document.getElementById("floating-cta");
+    var hero = document.querySelector(".hero");
+    if (!fab || !hero) return;
+    if (!("IntersectionObserver" in window)) { fab.classList.add("is-visible"); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        fab.classList.toggle("is-visible", !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    io.observe(hero);
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    renderPlans();
+    renderMatrix();
+    initReveal();
+    initGauges();
+    initFloatingCta();
+  });
+})();
+</script>
+</body>
+</html>
