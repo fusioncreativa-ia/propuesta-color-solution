@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuesta Comercial & Estrategia Digital — Color Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            darkbg: '#050811',
+            blockbg: '#0F172A',
+            limeaccent: {
+              400: '#a3e635',
+              500: '#84cc16',
+              600: '#65a30d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050811;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(132, 204, 22, 0.07) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.9) 0px, transparent 50%);
+    }
+    .block-card {
+      background-color: #0F172A;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
+    }
+    .block-card-featured {
+      background-color: #0F172A;
+      border: 2px solid #84cc16;
+      box-shadow: 0 0 35px rgba(132, 204, 22, 0.18);
+    }
+  </style>
+</head>
+<body class="text-slate-200 font-sans antialiased min-h-screen selection:bg-lime-500 selection:text-black pb-20">
+
+  <!-- Header Section con el nuevo Logo -->
+  <header class="max-w-6xl mx-auto pt-14 px-4 text-center">
+    <!-- Logo de Fusión Creativa -->
+    <div class="mb-6">
+      <img src="Logo.png" alt="Fusión Creativa Logo" class="h-20 sm:h-24 mx-auto object-contain filter drop-shadow-[0_0_20px_rgba(132,204,22,0.25)]">
+    </div>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-lime-500/30 text-lime-400 text-xs font-semibold tracking-wider uppercase mb-6">
+      <span class="w-2.5 h-2.5 rounded-full bg-lime-400 animate-pulse"></span>
+      Propuesta Comercial de Transformación Digital
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-4">
+      Estrategia Digital & Web Inmersiva
+    </h1>
+    <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal">
+      Exclusivo para <span class="text-white font-semibold">Color Solution</span> — Desarrollado por <span class="text-lime-400 font-semibold">Fusión Creativa</span>
+    </p>
+    <div class="mt-4 text-xs text-slate-500 font-medium">Septiembre 2026 • Documento Confidencial</div>
+  </header>
+
+  <!-- BLOQUE 1: Visión Ejecutiva -->
+  <section class="max-w-5xl mx-auto mt-14 px-4">
+    <div class="block-card rounded-3xl p-8 sm:p-10 relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-2 h-full bg-lime-500"></div>
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+        <svg class="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        Visión Ejecutiva
+      </h2>
+      <p class="text-slate-300 leading-relaxed text-base sm:text-lg mb-6">
+        En el sector de venta de equipo, cortadoras, plotters e impresoras de mediano y alto volumen, la decisión de compra de un cliente industrial o comercial depende de dos factores críticos: <strong class="text-white">el respaldo técnico demostrado</strong> (ver equipos operando en talleres reales) y <strong class="text-white">la agilidad en soporte y repuestos</strong> (cotizar insumos y mantenimiento antes de detener producción).
+      </p>
+      <p class="text-slate-400 leading-relaxed">
+        Esta propuesta busca transformar el activo digital de <strong class="text-white">Color Solution</strong> en una plataforma comercial activa las 24 horas del día. Combinamos una experiencia web inmersiva de alta velocidad, un Dashboard de Control Comercial para la gerencia y un Módulo de Reputación en Video que captura testimonios de clientes con sus equipos operando a plena capacidad.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE: Diagnóstico de Rendimiento (PageSpeed) -->
+  <section class="max-w-5xl mx-auto mt-16 px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white">Diagnóstico de Rendimiento (Google PageSpeed)</h2>
+      <p class="text-slate-400 text-sm mt-2">Comparativa de velocidad en dispositivos móviles (El factor crítico que hoy limita la conversión)</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Estado Actual (Color Solution) -->
+      <div class="block-card rounded-3xl p-8 border-t-4 border-t-rose-500 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/30">Estado Actual</span>
+            <span class="text-xs text-slate-400">Móvil (Lighthouse)</span>
+          </div>
+
+          <div class="flex items-center gap-6 mb-8">
+            <div class="w-24 h-24 rounded-full border-4 border-rose-500 flex flex-col items-center justify-center bg-rose-500/10 shrink-0">
+              <span class="text-3xl font-extrabold text-rose-400">42</span>
+              <span class="text-[10px] text-rose-300 uppercase font-semibold">Rendimiento</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">Carga Lenta y Fricción</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Los clientes móviles abandonan la web antes de ver los catálogos debido a tiempos de espera excesivos.</p>
+            </div>
+          </div>
+
+          <ul class="space-y-3 border-t border-slate-800 pt-6 text-sm text-slate-300">
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Renderizado Mayor (LCP):</span>
+              <span class="text-rose-400 font-bold">8,7 s (Lento)</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Primer Contenido (FCP):</span>
+              <span class="text-rose-400 font-bold">4,1 s</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Bloqueo Total (TBT):</span>
+              <span class="text-rose-400 font-bold">680 ms</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Como Quedaría con Fusión Creativa -->
+      <div class="block-card-featured rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-lime-500 text-slate-950 text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl shadow-lg">
+          Optimizado ⭐
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-500/10 px-3 py-1 rounded-full border border-lime-500/30">Con Fusión Creativa</span>
+            <span class="text-xs text-slate-400">Móvil (Optimizado)</span>
+          </div>
+
+          <div class="flex items-center gap-6 mb-8">
+            <div class="w-24 h-24 rounded-full border-4 border-lime-500 flex flex-col items-center justify-center bg-lime-500/10 shrink-0">
+              <span class="text-3xl font-extrabold text-lime-400">96</span>
+              <span class="text-[10px] text-lime-300 uppercase font-semibold">Rendimiento</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-1">Carga Instantánea</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Experiencia de navegación fluida, diseño inmersivo y apertura inmediata de cotizaciones en celulares.</p>
+            </div>
+          </div>
+
+          <ul class="space-y-3 border-t border-slate-800 pt-6 text-sm text-slate-200">
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Renderizado Mayor (LCP):</span>
+              <span class="text-lime-400 font-bold">1,8 s (Excelente)</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Primer Contenido (FCP):</span>
+              <span class="text-lime-400 font-bold">1,7 s</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-slate-400 text-xs">Bloqueo Total (TBT):</span>
+              <span class="text-lime-400 font-bold">0 ms (Cero fricción)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOQUE 2: Pilares de la Plataforma -->
+  <section class="max-w-6xl mx-auto mt-16 px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white">Pilares de la Plataforma</h2>
+      <p class="text-slate-400 text-sm mt-2">Tecnología diseñada para maximizar la venta de equipos, soporte técnico y suministros</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="block-card rounded-2xl p-6 border-t-4 border-t-lime-500">
+        <div class="w-12 h-12 rounded-xl bg-lime-500/10 border border-lime-500/30 flex items-center justify-center text-lime-400 mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Web Inmersiva</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Rediseño moderno enfocado en catálogo de equipos de impresión, plotters, cortadoras y pedido rápido de suministros.</p>
+      </div>
+
+      <div class="block-card rounded-2xl p-6 border-t-4 border-t-lime-500">
+        <div class="w-12 h-12 rounded-xl bg-lime-500/10 border border-lime-500/30 flex items-center justify-center text-lime-400 mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Admin Simplificado</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Panel intuitivo para actualizar fichas técnicas, precios de consumibles y promociones en minutos.</p>
+      </div>
+
+      <div class="block-card rounded-2xl p-6 border-t-4 border-t-lime-500">
+        <div class="w-12 h-12 rounded-xl bg-lime-500/10 border border-lime-500/30 flex items-center justify-center text-lime-400 mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Dashboard Ejecutivo</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Visualización clara de cotizaciones de equipo, repuestos solicitados y cálculo de volumen comercial en dólares.</p>
+      </div>
+
+      <div class="block-card rounded-2xl p-6 border-t-4 border-t-lime-500">
+        <div class="w-12 h-12 rounded-xl bg-lime-500/10 border border-lime-500/30 flex items-center justify-center text-lime-400 mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Reseñas en Video</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Enlace/QR para que clientes muestren sus plotters o cortadoras instaladas y graben un testimonio de 15 segundos.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOQUE 3: Planes y Modelos de Inversión (Cards) -->
+  <section class="max-w-6xl mx-auto mt-20 px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Planes y Modelos de Inversión</h2>
+      <p class="text-slate-400 mt-2">Cuota de Setup fija de <strong class="text-white">$1,550 USD</strong> para cualquiera de los planes</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- Plan 1 -->
+      <div class="block-card rounded-3xl p-8 flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Plan 1</div>
+          <h3 class="text-2xl font-bold text-white">Smart Essential</h3>
+          <p class="text-xs text-slate-400 mt-1">Presencia digital moderna y métricas operativas</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white">$180</span>
+              <span class="text-slate-400 text-sm">/ mes</span>
+            </div>
+            <div class="text-xs text-lime-400 font-medium mt-1">+ Setup inicial de $1,550</div>
+          </div>
+
+          <ul class="space-y-3 border-t border-slate-800 pt-6 text-sm text-slate-300">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Sitio Web Inmersivo Rediseñado
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Panel de Edición Rápida (Admin)
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Dashboard Básico de Solicitudes y Clics
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Hosting de Alta Velocidad y SSL
+            </li>
+            <li class="flex items-center gap-2 text-slate-500 line-through">
+              Bot Conversacional 24/7 con IA
+            </li>
+            <li class="flex items-center gap-2 text-slate-500 line-through">
+              Módulo de Reseñas en Video
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plan 2 (Estrella) -->
+      <div class="block-card-featured rounded-3xl p-8 flex flex-col justify-between relative">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-lime-500 text-slate-950 text-xs font-extrabold uppercase px-4 py-1 rounded-full shadow-lg">
+          Plan Estrella Recomendado ⭐
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold text-lime-400 uppercase tracking-wider mb-2">Plan 2</div>
+          <h3 class="text-2xl font-bold text-white">Growth AI</h3>
+          <p class="text-xs text-slate-400 mt-1">Acelerador de ventas de equipos y prueba social</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold text-white">$220</span>
+              <span class="text-slate-400 text-sm">/ mes</span>
+            </div>
+            <div class="text-xs text-lime-400 font-semibold mt-1">+ Setup inicial de $1,550</div>
+          </div>
+
+          <ul class="space-y-3 border-t border-slate-800 pt-6 text-sm text-slate-200">
+            <li class="flex items-center gap-2 font-medium">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Todo lo del Plan Smart Essential
+            </li>
+            <li class="flex items-center gap-2 text-white font-semibold">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Bot Conversacional 24/7 con IA
+            </li>
+            <li class="flex items-center gap-2 text-white font-semibold">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Módulo de Reseñas en Video (QR/Link)
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Calculadora de ROI & Oportunidades ($)
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Pre-calificación de Leads
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="block-card rounded-3xl p-8 flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Plan 3</div>
+          <h3 class="text-2xl font-bold text-white">Enterprise AI 🚀</h3>
+          <p class="text-xs text-slate-400 mt-1">Automatización comercial y servicio prioritario</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white">$340</span>
+              <span class="text-slate-400 text-sm">/ mes</span>
+            </div>
+            <div class="text-xs text-lime-400 font-medium mt-1">+ Setup inicial de $1,550</div>
+          </div>
+
+          <ul class="space-y-3 border-t border-slate-800 pt-6 text-sm text-slate-300">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Todo lo del Plan Growth AI
+            </li>
+            <li class="flex items-center gap-2 font-semibold text-white">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Alertas Instantáneas Push / WA
+            </li>
+            <li class="flex items-center gap-2 font-semibold text-white">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Gestión IA de Reseñas Google Maps
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Seguimiento Automático de Cotizaciones
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Radar de Retención e Interés de Equipo
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOQUE 4: Matriz Comparativa Detallada (100% Responsive) -->
+  <section class="max-w-5xl mx-auto mt-20 px-4">
+    <div class="block-card rounded-3xl p-6 sm:p-8">
+      <h3 class="text-xl font-bold text-white mb-6 text-center">Matriz Comparativa de Funcionalidades</h3>
+      
+      <!-- VISTA MÓVIL (Móviles / Pantallas pequeñas) -->
+      <div class="md:hidden space-y-4">
+        
+        <!-- Item 1 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Sitio Web Inmersivo Rediseñado</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-lime-500/10 p-2.5 rounded-xl border border-lime-500/40">
+              <span class="block text-[10px] text-lime-400 font-bold uppercase mb-1">Growth ⭐</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Panel de Edición Rápida (Admin)</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-lime-500/10 p-2.5 rounded-xl border border-lime-500/40">
+              <span class="block text-[10px] text-lime-400 font-bold uppercase mb-1">Growth ⭐</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Dashboard de Métricas Comerciales</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-300 font-medium">Básico</span>
+            </div>
+            <div class="bg-lime-500/10 p-2.5 rounded-xl border border-lime-500/40">
+              <span class="block text-[10px] text-lime-400 font-bold uppercase mb-1">Growth ⭐</span>
+              <span class="text-lime-400 font-bold text-[11px]">Avanzado + ROI</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-slate-200 font-medium text-[11px]">Completo + Fuga</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Bot Conversacional con IA 24/7</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-lime-500/10 p-2.5 rounded-xl border border-lime-500/40">
+              <span class="block text-[10px] text-lime-400 font-bold uppercase mb-1">Growth ⭐</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold text-[11px]">✓ Multicanal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Módulo de Reseñas en Video (QR/Link)</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-lime-500/10 p-2.5 rounded-xl border border-lime-500/40">
+              <span class="block text-[10px] text-lime-400 font-bold uppercase mb-1">Growth ⭐</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Alertas Instantáneas (Push / WhatsApp)</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Growth ⭐</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Gestión IA de Reseñas Google Maps</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Growth ⭐</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
+          <div class="font-bold text-white text-sm mb-3">Seguimiento Automático de Cotizaciones</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Essential</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Growth ⭐</span>
+              <span class="text-slate-600 font-bold">—</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
+              <span class="block text-[10px] text-slate-400 font-medium uppercase mb-1">Enterprise</span>
+              <span class="text-lime-400 font-bold">✓</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VISTA ESCRITORIO (Tablets y Laptops) -->
+      <div class="hidden md:block overflow-x-auto">
+        <table class="w-full text-left text-sm text-slate-300 min-w-[600px]">
+          <thead class="bg-slate-950/80 text-xs uppercase text-slate-400 border-b border-slate-800">
+            <tr>
+              <th scope="col" class="py-4 px-6">Funcionalidad</th>
+              <th scope="col" class="py-4 px-4 text-center">Essential ($180)</th>
+              <th scope="col" class="py-4 px-4 text-center text-lime-400 font-bold">Growth ($220)</th>
+              <th scope="col" class="py-4 px-4 text-center">Enterprise ($340)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Sitio Web Inmersivo Rediseñado</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Panel de Edición Rápida (Admin)</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Dashboard de Métricas Comerciales</td>
+              <td class="py-4 px-4 text-center text-slate-400">Básico</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">Avanzado + ROI</td>
+              <td class="py-4 px-4 text-center text-slate-300">Completo + Fuga</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Bot Conversacional con IA 24/7</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓ Multicanal</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Módulo de Reseñas en Video (QR/Link)</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Alertas Instantáneas (Push / WhatsApp)</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Gestión IA de Reseñas Google Maps</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-white">Seguimiento Automático de Cotizaciones</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-slate-600">—</td>
+              <td class="py-4 px-4 text-center text-lime-400 font-bold">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 5: Próximos Pasos -->
+  <section class="max-w-4xl mx-auto mt-20 px-4">
+    <div class="block-card rounded-3xl p-8 sm:p-10 text-center border-l-4 border-l-lime-500">
+      <h2 class="text-2xl font-bold text-white mb-3">Próximos Pasos de Implementación</h2>
+      <p class="text-slate-400 text-sm max-w-lg mx-auto mb-8">Una vez seleccionado el paquete de su preferencia, iniciamos la construcción de la plataforma de inmediato.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-left">
+        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800">
+          <div class="text-lime-400 font-bold text-sm mb-1">Paso 1</div>
+          <div class="text-xs text-slate-300 font-medium">Selección del Plan Comercial</div>
+        </div>
+        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800">
+          <div class="text-lime-400 font-bold text-sm mb-1">Paso 2</div>
+          <div class="text-xs text-slate-300 font-medium">Anticipo 50% de Cuota Setup</div>
+        </div>
+        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800">
+          <div class="text-lime-400 font-bold text-sm mb-1">Paso 3</div>
+          <div class="text-xs text-slate-300 font-medium">Recopilación de textos, imágenes, videos y archivos .pdf</div>
+        </div>
+        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800">
+          <div class="text-lime-400 font-bold text-sm mb-1">Paso 4</div>
+          <div class="text-xs text-slate-300 font-medium">Despliegue (7-10 días hábiles)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-xs text-slate-500 mt-16">
+    © 2026 Fusión Creativa. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
