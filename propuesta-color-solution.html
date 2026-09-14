@@ -307,6 +307,15 @@
   .cost-card__stat{ color: var(--warn); }
   .cost-card__stat--after{ color: var(--neon); }
 
+  .base-card{ text-align:center; }
+  .base-card .eyebrow{ justify-content:center; }
+  .base-card__price-row{ display:flex; align-items:baseline; justify-content:center; gap:.5rem; margin:1rem 0 .25rem; flex-wrap:wrap; }
+  .base-card__price-num{ font-size: clamp(2.5rem, 2rem + 2vw, 3.25rem); font-weight:800; color:var(--ink); line-height:1; }
+  .base-card__price-unit{ font-size:.85rem; color:var(--muted); }
+  .base-card .callout-card__body{ max-width: 52ch; margin-inline:auto; }
+  .base-card__features{ display:inline-flex !important; flex-direction:column; align-items:flex-start; border-top:none !important; padding-top:0 !important; margin: 1.5rem auto; text-align:left; }
+  .base-card .callout-card__conclusion{ text-align:left; }
+
   /* ---------- Pilares ---------- */
   .pillars-grid{ display:grid; grid-template-columns: 1fr; gap: 1.25rem; }
   @media (min-width:640px){ .pillars-grid{ grid-template-columns: 1fr 1fr; } }
@@ -347,7 +356,6 @@
   .plan-card--featured .plan__price-num{ font-size:2.75rem; }
   .plan__price-unit{ font-size:.85rem; color:var(--muted); }
   .plan__anchor{ font-size:.75rem; color:var(--neon); font-weight:600; margin-top:.35rem; }
-  .plan__setup{ font-size:.72rem; color:var(--muted); margin-top:.15rem; }
 
   .plan__features{ border-top:1px solid rgb(255 255 255 / 0.08); padding-top:1.25rem; display:flex; flex-direction:column; gap:.7rem; flex:1; }
   .plan__feature{ display:flex; align-items:flex-start; gap:.55rem; font-size:.88rem; }
@@ -608,11 +616,34 @@
       </div>
     </section>
 
+    <!-- BLOQUE: Sitio Web Administrable (base, pago único) -->
+    <section class="section wrap wrap--narrow" aria-labelledby="base-title">
+      <div class="glass-card glow callout-card base-card reveal" aria-labelledby="base-title">
+        <div class="eyebrow"><span class="eyebrow__dot"></span>Sitio Web Administrable</div>
+        <div class="base-card__price-row">
+          <span class="base-card__price-num">$1,500</span>
+          <span class="base-card__price-unit">USD · pago único</span>
+        </div>
+        <h2 class="callout-card__title" id="base-title">Esto es lo único obligatorio</h2>
+        <p class="callout-card__body">
+          Incluye el diseño e implementación completa del sitio web inmersivo y el panel de administración para que su equipo actualice fichas técnicas, precios de consumibles y promociones sin depender de un desarrollador.
+        </p>
+        <ul class="plan__features base-card__features">
+          <li class="plan__feature plan__feature--on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Sitio Web Inmersivo Rediseñado</span></li>
+          <li class="plan__feature plan__feature--on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Panel de Edición Rápida (Admin)</span></li>
+          <li class="plan__feature plan__feature--on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Implementación y puesta en producción</span></li>
+        </ul>
+        <p class="callout-card__conclusion">
+          Se paga <strong>una sola vez</strong> — no hay mensualidad obligatoria para tener su sitio funcionando. El hosting, el dashboard comercial, el bot con IA y las reseñas en video son <strong>mantenimiento y crecimiento opcional</strong>, disponibles abajo si usted decide contratarlos.
+        </p>
+      </div>
+    </section>
+
     <!-- BLOQUE 3: Planes -->
     <section class="section wrap" aria-labelledby="plans-title">
       <div class="section__header">
-        <h2 class="section__title" id="plans-title">Planes y Modelos de Inversión</h2>
-        <p class="plans-note">Cuota de Setup fija de <strong>$1,550 USD</strong> para cualquiera de los planes</p>
+        <h2 class="section__title" id="plans-title">Mantenimiento y Crecimiento — Opcional</h2>
+        <p class="plans-note">El sitio ya está pagado arriba. Esto se contrata solo si lo necesita, y se puede cancelar cuando quiera.</p>
       </div>
       <div class="plans-grid reveal-grid" id="plans-grid" aria-live="polite"></div>
     </section>
@@ -708,8 +739,6 @@
       price: 180,
       featured: false,
       features: [
-        { text: "Sitio Web Inmersivo Rediseñado", on: true },
-        { text: "Panel de Edición Rápida (Admin)", on: true },
         { text: "Dashboard Básico de Solicitudes y Clics", on: true },
         { text: "Hosting de Alta Velocidad y SSL", on: true },
         { text: "Bot Conversacional 24/7 con IA", on: false },
@@ -771,9 +800,8 @@
           '<h3 class="plan__name">' + plan.name + '</h3>' +
           '<p class="plan__tagline">' + plan.tagline + '</p>' +
           '<div class="plan__price-row">' +
-            '<div class="plan__price"><span class="plan__price-num">$' + plan.price + '</span><span class="plan__price-unit">/ mes</span></div>' +
+            '<div class="plan__price"><span class="plan__price-num">$' + plan.price + '</span><span class="plan__price-unit">/ mes, opcional</span></div>' +
             '<div class="plan__anchor">≈ $' + perDay + ' por día</div>' +
-            '<div class="plan__setup">+ Setup inicial de $1,550</div>' +
           '</div>' +
           '<ul class="plan__features">' + featuresHtml + '</ul>' +
           '<div class="plan__footer">' +
@@ -787,8 +815,6 @@
 
   /* ---------- Datos de la matriz comparativa (fuente única) ---------- */
   var FEATURES = [
-    { name: "Sitio Web Inmersivo Rediseñado", essential: true, growth: true, enterprise: true },
-    { name: "Panel de Edición Rápida (Admin)", essential: true, growth: true, enterprise: true },
     { name: "Dashboard de Métricas Comerciales", essential: "Básico", growth: "Avanzado + ROI", enterprise: "Completo + Fuga" },
     { name: "Bot Conversacional con IA 24/7", essential: false, growth: true, enterprise: "✓ Multicanal" },
     { name: "Módulo de Reseñas en Video (QR/Link)", essential: false, growth: true, enterprise: true },
