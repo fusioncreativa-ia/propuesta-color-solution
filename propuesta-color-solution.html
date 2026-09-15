@@ -835,11 +835,18 @@
 
   /* ---------- Datos de la matriz comparativa (fuente única) ---------- */
   var FEATURES = [
-    { name: "Dashboard de Métricas Comerciales", essential: "Básico", growth: "Avanzado + ROI", enterprise: "Completo + Fuga" },
+    { name: "Dashboard Básico de métricas del comportamiento de los visitantes", essential: true, growth: true, enterprise: true },
+    { name: "Tracker de Google y Meta (para saber de dónde viene el tráfico)", essential: true, growth: true, enterprise: true },
+    { name: "Diseño Profesional", essential: true, growth: true, enterprise: true },
+    { name: "Librerías de Programación Actualizadas", essential: true, growth: true, enterprise: true },
     { name: "Asistente de Ventas con IA 24/7", essential: false, growth: true, enterprise: "✓ Multicanal" },
+    { name: "SEO y GEO para Google y LLM (Inteligencias Artificiales)", essential: false, growth: true, enterprise: true },
+    { name: "FAQ con IA para mejorar el posicionamiento web orgánico", essential: false, growth: true, enterprise: true },
     { name: "Módulo de Reseñas en Video (QR/Link)", essential: false, growth: true, enterprise: true },
+    { name: "Pre-calificación de Leads", essential: false, growth: true, enterprise: true },
     { name: "Alertas Instantáneas (Push)", essential: false, growth: false, enterprise: true },
-    { name: "Creación de Cotizaciones + Seguimiento Automático de Venta", essential: false, growth: false, enterprise: true }
+    { name: "Creación de Cotizaciones + Seguimiento Automático de Venta", essential: false, growth: false, enterprise: true },
+    { name: "Radar de Retención e Interés de Equipo", essential: false, growth: false, enterprise: true }
   ];
   var COL_LABELS = { essential: "Essential ($180)", growth: "Growth ($220)", enterprise: "Enterprise ($340)" };
 
